@@ -179,7 +179,7 @@ html {
 }
 
 /* HOW IT WORKS BOX STYLING */
-.how-it-works-box:has(h2) {
+.how-it-works-box{
     margin: 70px 0;
     background-color: rgba(255, 255, 255, 0.566);
 }
@@ -321,4 +321,11 @@ html {
     .hero-section-text h1 {
         font-size: 28px;
     }
+    .how-it-works-box{
+    margin: 30px 0;
+    background-color: rgba(255, 255, 255, 0.566);
+}
+.how-it-works-middle{
+    height: 293px;
+}
 }
