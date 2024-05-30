@@ -1,0 +1,324 @@
+/* LINK TO GOOGLE FONT */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,400;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+:root {
+    --black-color: black;
+    --white-color: white;
+    --dark-white: rgb(233, 230, 230);
+    --transition: 0.7s;
+    --green-color: #039442;
+}
+
+/* REMOVING THE DEFAULT STYLING */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+}
+.show-phone {
+    display: none;
+}
+/* NAV BAR STYLING */
+.nav-bar,
+.nav-bar-list {
+    display: flex;
+}
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-bar {
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10rem;
+    border-bottom: 1px solid black;
+    height: 70px;
+    background-color: var(--white-color);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+.nav-bar > img {
+    display: none;
+}
+.nav-bar-list li {
+    margin-left: 30px;
+    list-style: none;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+}
+.nav-bar li > img {
+    display: none;
+}
+
+/* NAV BAR LINK STYLING */
+.nav-bar a {
+    text-decoration: none;
+    color: var(--black-color);
+    border-radius: 9px;
+    padding: 10px 0;
+}
+
+.nav-bar-list > li a {
+    position: relative;
+    text-decoration: none;
+}
+
+.nav-bar-list > li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    background-color: var(--green-color);
+    transition: width 0.2s;
+}
+.nav-bar-list > li a:hover::after {
+    width: 100%;
+}
+.signUp-signIn {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+.signUp-signIn a {
+    background-color: var(--green-color);
+    color: var(--white-color);
+    border: 1px solid var(--green-color);
+    transition: 0.4s;
+    padding: 10px 16px;
+}
+.signUp-signIn a:hover {
+    background-color: var(--white-color);
+    color: var(--black-color);
+    border: 1px solid var(--green-color);
+}
+.show-hero {
+    padding-bottom: 98px;
+}
+
+/* HERO SECTION */
+.hero-section {
+    display: flex;
+    margin: 0 auto;
+    padding: 0 10rem;
+}
+.hero-section > * {
+    flex-basis: 50%;
+}
+.hero-section-image img {
+    width: 120%;
+    height: 400px;
+}
+.hero-section-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-section-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.hero-section-text h1 {
+    font-size: 53px;
+    font-weight: 780;
+}
+.hero-section-text p {
+    margin: 20px 0;
+}
+.hero-section-text a {
+    margin: 0 auto;
+    border: 1px solid var(--green-color);
+    padding: 10px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    background-color: var(--green-color);
+    color: var(--white-color);
+    transition: 0.4s;
+}
+.hero-section-text a:hover {
+    background-color: var(--white-color);
+    color: var(--black-color);
+}
+
+/* HOW IT WORKS SECTION */
+.how-it-works-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 25px;
+}
+.how-it-works-right-left-middle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.how-it-works-left,
+.how-it-works-middle,
+.how-it-works-right {
+    width: 350px;
+}
+.how-it-works-top {
+    width: 700px;
+    text-align: center;
+    margin-top: 150px;
+}
+.how-it-works-middle {
+    z-index: -10;
+}
+
+/* HOW IT WORKS BOX STYLING */
+.how-it-works-box:has(h2) {
+    margin: 70px 0;
+    background-color: rgba(255, 255, 255, 0.566);
+}
+.how-it-works-box h2 {
+    width: 80px;
+    height: 80px;
+    background-color: var(--dark-white);
+    background-color: ;
+    font-size: 32px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    color: var(--green-color);
+}
+.how-it-works-box h3 {
+    margin: 10px 0;
+}
+
+.how-it-works-box h2:hover {
+    background-color: var(--green-color);
+    color: var(--white-color);
+}
+
+.how-it-works-left .how-it-works-box {
+    text-align: right;
+}
+.how-it-works-left .how-it-works-box h2 {
+    margin-left: auto;
+}
+.how-it-works-box h2 {
+    margin-left: auto;
+    margin-right: auto;
+}
+.how-it-works-box {
+    text-align: center;
+}
+/* DESIGN FOR TABLET */
+@media screen and (max-width: 1146px) {
+    .nav-bar {
+        padding: 0 2rem;
+    }
+    .hero-section-text h1 {
+        font-size: 34px;
+    }
+    .hero-section-image img {
+        width: 100%;
+    }
+    .hero-section {
+        padding: 0 2rem;
+    }
+    .how-it-works-top {
+        margin-top: 90px;
+    }
+}
+
+/* DESIGN FOR TABLET */
+@media screen and (max-width: 858px) {
+    .nav-bar > img {
+        display: block;
+    }
+    .nav-bar-list {
+        position: absolute;
+        height: 200vh;
+        right: 0;
+        top: 0;
+        flex-direction: column;
+        background-color: var(--black-color);
+        padding-top: 20px;
+        transition: 0.7s;
+        width: 0;
+    }
+    .toggle-nav {
+        width: 300px;
+        overflow: hidden;
+    }
+    .nav-bar-list a {
+        color: var(--white-color);
+    }
+    .nav-bar-list > img {
+        width: 35px;
+        margin-left: 36px;
+    }
+    .nav-bar .logo img {
+        width: 150px;
+    }
+    .nav-bar li {
+        margin-left: 30px;
+    }
+    .nav-bar a {
+        color: var(--white-color);
+    }
+    .hero-section {
+        flex-direction: column;
+    }
+    .signUp-signIn {
+        margin: 0 auto;
+        margin-top: 50px;
+        justify-content: space-between;
+    }
+    .how-it-works-top {
+        width: auto;
+        padding: 0 30x;
+    }
+    .how-it-works-right {
+        width: 350px;
+    }
+    .how-it-works-middle {
+        overflow: hidden;
+    }
+    .how-it-works-top {
+        margin-top: 60px;
+        width: 70%;
+    }
+    .how-it-works-left .how-it-works-box h2 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .how-it-works-left .how-it-works-box {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 655px) {
+    .hero-section {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero-section-image img {
+        width: 600px;
+        height: auto;
+    }
+    .hero-section-image{
+        overflow: hidden;
+    }
+    .hero-section-text h1 {
+        font-size: 28px;
+    }
+}
